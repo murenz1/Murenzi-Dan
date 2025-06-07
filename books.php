@@ -1,5 +1,4 @@
 <?php
-// books.php
 session_start();
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
@@ -8,7 +7,6 @@ if (!isset($_SESSION['user_id'])) {
 include 'db.php';
 $error = '';
 $success = '';
-// Handle Create
 if (isset($_POST['add'])) {
     try {
         $tittle = $_POST['tittle'];
@@ -22,7 +20,6 @@ if (isset($_POST['add'])) {
         $error = 'Failed to add book.';
     }
 }
-// Handle Update
 if (isset($_POST['update'])) {
     try {
         $id = $_POST['id'];
@@ -37,7 +34,6 @@ if (isset($_POST['update'])) {
         $error = 'Failed to update book.';
     }
 }
-// Handle Delete
 if (isset($_GET['delete'])) {
     try {
         $id = $_GET['delete'];
@@ -49,7 +45,6 @@ if (isset($_GET['delete'])) {
         $error = 'Failed to delete book.';
     }
 }
-// Fetch books
 $result = $conn->query('SELECT * FROM books');
 ?>
 <!DOCTYPE html>

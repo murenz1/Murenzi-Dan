@@ -1,5 +1,4 @@
 <?php
-// register.php
 include 'db.php';
 $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

@@ -1,7 +1,6 @@
 <?php
-// db.php
 $host = 'localhost';
-$db   = 'books_db'; // Change to your DB name
+$db   = 'books_db';
 $user = 'root';
 $pass = '';
 
